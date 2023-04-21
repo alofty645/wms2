@@ -1,9 +1,21 @@
-const Header = () => {
+"use client";
+import { Typography, Box, useTheme } from "@mui/material";
+
+const Header = ({ title }) => {
+  const theme = useTheme();
   return (
-    <div
-      className="
-       m-4  h-20 bg-sky-950 rounded-3xl"
-    ></div>
+    <div className="text-white m-4 text-4xl ">{title}</div>
+
+    // <Box mb="30px">
+    //   <Typography
+    //     variant="h2"
+    //     color="#fff"
+    //     fontWeight="bold"
+    //     sx={{ m: "0 0 5px 0" }}
+    //   >
+    //     {title}
+    //   </Typography>
+    // </Box>
   );
 };
 
