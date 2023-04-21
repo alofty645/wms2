@@ -3,6 +3,7 @@
 import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import Header from "@/components/Header";
+import Newbutton from "@/components/Newbutton";
 
 const Contacts = () => {
   const columns = [
@@ -69,6 +70,7 @@ const Contacts = () => {
          m-4  h-3/4 rounded-3xl"
     >
       <Header title={"Contacts"}></Header>
+      <Newbutton title={"+ New Contact"}></Newbutton>
       <Box
         height="80vh"
         sx={{
