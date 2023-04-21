@@ -8,36 +8,37 @@ const Sidebar = () => {
           <h2 className="text-lg font-medium">WMS 2</h2>
         </div>
         <div className="px-4 py-2">
-          <a
-            href="/dashboard"
+          <Link
             className="block text-white hover:bg-white hover:text-black focus:bg-emerald-700 rounded-3xl p-3"
+            href="/dashboard"
           >
             Dashboard
-          </a>
-          <a
-            href="/sales"
+          </Link>
+
+          <Link
             className="block text-white hover:bg-white hover:text-black focus:bg-emerald-700 rounded-3xl p-3"
+            href="/sales"
           >
             Sales
-          </a>
-          <a
+          </Link>
+          <Link
+            className="block text-white hover:bg-white hover:text-black focus:bg-emerald-700 rounded-3xl p-3"
             href="/products"
-            className="block text-white hover:bg-white hover:text-black focus:bg-emerald-700  rounded-3xl p-3"
           >
             Products
-          </a>
-          <a
+          </Link>
+          <Link
+            className="block text-white hover:bg-white hover:text-black focus:bg-emerald-700 rounded-3xl p-3"
             href="/purchaseorders"
-            className="block text-white hover:bg-white hover:text-black focus:bg-emerald-700  rounded-3xl p-3"
           >
             Purchase Orders
-          </a>
-          <a
-            href="/contacts"
+          </Link>
+          <Link
             className="block text-white hover:bg-white hover:text-black focus:bg-emerald-700 rounded-3xl p-3"
+            href="/contacts"
           >
             Contacts
-          </a>
+          </Link>
         </div>
       </div>
     </div>
