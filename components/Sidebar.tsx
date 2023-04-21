@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Newbutton from "./Newbutton";
 
 const Sidebar = () => {
   return (

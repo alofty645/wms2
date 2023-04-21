@@ -70,7 +70,9 @@ const Contacts = () => {
          m-4  h-3/4 rounded-3xl"
     >
       <Header title={"Contacts"}></Header>
-      <Newbutton title={"+ New Contact"}></Newbutton>
+      <div className="my-3">
+        <Newbutton title={"+ New Contact"}></Newbutton>
+      </div>
       <Box
         height="80vh"
         sx={{

@@ -1,13 +1,39 @@
 "use client";
-import Link from "next/link";
 
-interface ButtonProps {
-  title: string;
-}
+import clsx from "clsx";
 
-const Newbutton = ({ title }: ButtonProps) => {
+type Props = React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+const Newbutton = ({ className, title, ...rest }: Props) => {
   return (
-    <button className=" font-bold text-black bg-white mb-5 p-3 text-l rounded-3xl ">
+    <button
+      className={clsx(
+        "bg-white text-black",
+        "py-2 px-8 leading-6",
+        "rounded-full",
+        "font-semibold",
+        "tracking-wide",
+        "cursor-pointer",
+        "inline-flex",
+        "items-center",
+        "justify-center",
+        "relative shadow",
+        // Hover
+        "transition",
+        "hover:bg-indigo-600",
+        "hover:shadow-md",
+        // Focus
+        "outline-none",
+        "ring-indigo-500/70",
+        "ring-offset-2",
+        "focus-visible:ring-2",
+        "focus:scale-[0.98]",
+        // Disabled
+        "disabled:bg-indigo-500/50 disabled:cursor-not-allowed",
+        className
+      )}
+      {...rest}
+    >
       {title}
     </button>
   );
