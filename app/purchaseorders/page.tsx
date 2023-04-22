@@ -4,70 +4,11 @@ import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import Header from "@/components/Header";
 import Newbutton from "@/components/Newbutton";
+import Gridsettings from "@/util/Grids/Gridsettings";
+import { POcolumns } from "@/util/Grids/Columns";
+import rows from "@/util/Grids/testrows";
 
 const Purchaseorders = () => {
-  const columns = [
-    { field: "id", headerName: "Purchase ID" },
-    { field: "purchase_date", headerName: "Date" },
-    {
-      field: "proddesc",
-      headerName: "Supplier ",
-      flex: 1,
-    },
-
-    {
-      field: "expected_date",
-      headerName: "Expected Date",
-      flex: 1,
-    },
-    {
-      field: "instock",
-      headerName: "Items",
-      flex: 1,
-      cellClassName: "name-column--cell",
-    },
-
-    {
-      field: "prodprice",
-      headerName: "Total Purchase Price",
-      flex: 1,
-    },
-    {
-      field: "purchase_status",
-      headerName: "Status",
-      flex: 1,
-    },
-
-    {
-      field: "Admin",
-      headerName: "Admin",
-      flex: 1,
-    },
-  ];
-
-  const rows = [
-    {
-      id: 1,
-      contact_type: "Customer",
-      first_name: "John",
-      last_name: "Doe",
-      phone_number: "555-555-5555",
-      contact_email: "",
-      billing_address: "",
-      Admin: "No",
-    },
-    {
-      id: 2,
-      contact_type: "Customer",
-      first_name: "Jane",
-      last_name: "Doe",
-      phone_number: "555-555-5555",
-      contact_email: "",
-      billing_address: "",
-      Admin: "No",
-    },
-  ];
-
   return (
     <div
       className="
@@ -80,44 +21,13 @@ const Purchaseorders = () => {
       <Box
         height="80vh"
         sx={{
-          "& .MuiDataGrid-root": {
-            backgroundColor: "#082F49",
-            color: "#fff",
-            border: "none",
-          },
-          "& .MuiDataGrid-cell": {
-            color: "#fff",
-            borderBottom: "none",
-          },
-          "& .name-column--cell": {
-            color: "#fff",
-          },
-          "& .MuiDataGrid-columnHeaders": {
-            backgroundColor: "#3E4396",
-            color: "#fff",
-            borderBottom: "none",
-          },
-          "& .MuiDataGrid-virtualScroller": {
-            color: "#fff",
-          },
-          "& .MuiDataGrid-footerContainer": {
-            backgroundColor: "#3E4396",
-            color: "#fff",
-            borderTop: "none",
-          },
-          "& .MuiCheckbox-root": {
-            color: "#fff",
-          },
-          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
-            color: "#fff",
-            margin: "10px",
-          },
+          ...Gridsettings,
         }}
       >
         <DataGrid
           checkboxSelection
           rows={rows}
-          columns={columns}
+          columns={POcolumns}
           components={{ Toolbar: GridToolbar }}
         />
       </Box>
