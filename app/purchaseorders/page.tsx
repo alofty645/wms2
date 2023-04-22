@@ -3,7 +3,7 @@
 import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import Header from "@/components/Header";
-import Newbutton from "@/components/Newbutton";
+import Button from "@/components/UI/Button";
 import Gridsettings from "@/util/Grids/Gridsettings";
 import { POcolumns } from "@/util/Grids/Columns";
 import rows from "@/util/Grids/testrows";
@@ -16,7 +16,7 @@ const Purchaseorders = () => {
     >
       <Header title={"Purchase Orders"}></Header>
       <div className="my-3">
-        <Newbutton title={"+ New Purchase Order"}></Newbutton>
+        <Button title={"+ New Purchase Order"}></Button>
       </div>
       <Box
         height="80vh"
