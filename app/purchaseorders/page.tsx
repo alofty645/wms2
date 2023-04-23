@@ -7,8 +7,20 @@ import Button from "@/components/UI/Button";
 import Gridsettings from "@/util/Grids/Gridsettings";
 import { POcolumns } from "@/util/Grids/Columns";
 import rows from "@/util/Grids/testrows";
+import { useEffect, useState } from "react";
+import supabase from "@/util/Supabase/createclient";
 
 const Purchaseorders = () => {
+  const [purchaseorders, setPO] = useState([]);
+
+  async function getPO() {
+    let { data: PO } = await supabase.from("purchaseorders").select("*");
+    setPO(PO);
+  }
+
+  useEffect(() => {
+    getPO();
+  }, []);
   return (
     <div
       className="
@@ -26,7 +38,7 @@ const Purchaseorders = () => {
       >
         <DataGrid
           checkboxSelection
-          rows={rows}
+          rows={purchaseorders}
           columns={POcolumns}
           components={{ Toolbar: GridToolbar }}
         />

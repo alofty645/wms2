@@ -7,8 +7,22 @@ import Button from "@/components/UI/Button";
 import Gridsettings from "@/util/Grids/Gridsettings";
 import { Contactcolumns } from "@/util/Grids/Columns";
 import rows from "@/util/Grids/testrows";
+import { useEffect, useState } from "react";
+import supabase from "@/util/Supabase/createclient";
 
 const Contacts = () => {
+  const [contacts, setContacts] = useState([]);
+
+  async function getContacts() {
+    let { data: contact } = await supabase.from("contacts").select("*");
+    setContacts(contact);
+    console.log(contact);
+  }
+
+  useEffect(() => {
+    getContacts();
+  }, []);
+
   return (
     <div
       className="

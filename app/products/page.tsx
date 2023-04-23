@@ -7,8 +7,22 @@ import Button from "@/components/UI/Button";
 import Gridsettings from "@/util/Grids/Gridsettings";
 import { Productcolumns } from "@/util/Grids/Columns";
 import rows from "@/util/Grids/testrows";
+import { useEffect, useState } from "react";
+import supabase from "@/util/Supabase/createclient";
 
 const Products = () => {
+  const [products, setProducts] = useState([]);
+
+  async function getProducts() {
+    let { data: product } = await supabase.from("products").select("*");
+    setProducts(product);
+    console.log(product);
+  }
+
+  useEffect(() => {
+    getProducts();
+  }, []);
+
   return (
     <div
       className="
@@ -26,7 +40,7 @@ const Products = () => {
       >
         <DataGrid
           checkboxSelection
-          rows={rows}
+          rows={products}
           columns={Productcolumns}
           components={{ Toolbar: GridToolbar }}
         />
