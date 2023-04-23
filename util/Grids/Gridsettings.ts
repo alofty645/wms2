@@ -3,7 +3,7 @@ const Gridsettings = {
     backgroundColor: "#082F49",
     color: "#fff",
     border: "none",
-    borderRadius: "2%",
+    borderRadius: "20px",
   },
 
   "& .MuiDataGrid-cell": {
