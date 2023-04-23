@@ -3,7 +3,9 @@ const Gridsettings = {
     backgroundColor: "#082F49",
     color: "#fff",
     border: "none",
+    borderRadius: "2%",
   },
+
   "& .MuiDataGrid-cell": {
     color: "#fff",
     borderBottom: "none",
@@ -12,20 +14,20 @@ const Gridsettings = {
     color: "#fff",
   },
   "& .MuiDataGrid-columnHeaders": {
-    backgroundColor: "#3E4396",
-    color: "#fff",
+    backgroundColor: "#fff",
+    color: "#000",
     borderBottom: "none",
   },
   "& .MuiDataGrid-virtualScroller": {
     color: "#fff",
   },
   "& .MuiDataGrid-footerContainer": {
-    backgroundColor: "#3E4396",
-    color: "#fff",
+    backgroundColor: "#fff",
+    color: "#000",
     borderTop: "none",
   },
   "& .MuiCheckbox-root": {
-    color: "#fff",
+    color: "#000",
   },
   "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
     color: "#fff",

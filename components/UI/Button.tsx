@@ -20,7 +20,7 @@ const Button = ({ className, title, ...rest }: Props) => {
         "relative shadow",
         // Hover
         "transition",
-        "hover:bg-indigo-600",
+        "hover:bg-slate-300",
         "hover:shadow-md",
         // Focus
         "outline-none",

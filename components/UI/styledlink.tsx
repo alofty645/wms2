@@ -25,7 +25,7 @@ const StyledLink: React.FC<StyledLinkProps> = ({ title, href, id }) => {
         "relative shadow",
         // Hover
         "transition",
-        "hover:bg-indigo-600",
+        "hover:bg-slate-300",
         "hover:shadow-md",
         // Focus
         "outline-none",
