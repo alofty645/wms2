@@ -1,8 +1,5 @@
 "use client";
-import Button from "./UI/Button";
-import { Popover, Transition } from "@headlessui/react";
 import clsx from "clsx";
-import Link from "next/link";
 import Styledlink from "./UI/styledlink";
 
 const Topbar = () => {
@@ -60,20 +57,20 @@ const Topbar = () => {
               tabIndex={0}
               className="dropdown-content menu p-2 shadow bg-sky-950 rounded-box w-52"
             >
-              <Styledlink id="1" href="/builder" title={"+ Sale"}></Styledlink>
+              <Styledlink id="1" href="/new/sale" title={"+ Sale"}></Styledlink>
               <Styledlink
                 id="2"
-                href="/builder"
+                href="/new/product"
                 title={"+ Product"}
               ></Styledlink>
               <Styledlink
                 id="3"
-                href="/builder"
+                href="/new/po"
                 title={"+ Purchase"}
               ></Styledlink>
               <Styledlink
                 id="4"
-                href="/builder"
+                href="/new/contact"
                 title={"+ Contact"}
               ></Styledlink>
             </ul>

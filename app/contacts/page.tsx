@@ -3,12 +3,12 @@
 import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import Header from "@/components/Header";
-import Button from "@/components/UI/Button";
 import Gridsettings from "@/util/Grids/Gridsettings";
 import { Contactcolumns } from "@/util/Grids/Columns";
 import rows from "@/util/Grids/testrows";
 import { useEffect, useState } from "react";
 import supabase from "@/util/Supabase/createclient";
+import Styledlink from "@/components/UI/styledlink";
 
 const Contacts = () => {
   const [contacts, setContacts] = useState([]);
@@ -30,7 +30,7 @@ const Contacts = () => {
     >
       <Header title={"Contacts"}></Header>
       <div className="my-3">
-        <Button title={"+ New Contact"}></Button>
+        <Styledlink id="4" href="/new/contact" title={"+ Contact"}></Styledlink>{" "}
       </div>
       <Box
         height="80vh"

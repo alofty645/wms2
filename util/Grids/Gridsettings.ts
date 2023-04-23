@@ -7,7 +7,7 @@ const Gridsettings = {
   },
 
   "& .MuiDataGrid-cell": {
-    color: "#fff",
+    // color: "#fff",
     borderBottom: "none",
   },
   "& .name-column--cell": {
