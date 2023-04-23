@@ -11,7 +11,7 @@ const Sidebar = () => {
         <div className="px-4 py-2">
           <Link
             className="block text-white hover:bg-white hover:text-black focus:bg-emerald-700 rounded-3xl p-3"
-            href="/dashboard"
+            href="/"
           >
             Dashboard
           </Link>
