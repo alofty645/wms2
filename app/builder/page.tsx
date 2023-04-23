@@ -1,6 +1,7 @@
 "use client";
 
 import { Tab } from "@headlessui/react";
+import Basic from "@/components/forms/newcontact";
 
 const Buildertabs = () => {
   return (
@@ -20,7 +21,9 @@ const Buildertabs = () => {
         </Tab>
       </Tab.List>
       <Tab.Panels className="m-2">
-        <Tab.Panel>content 1</Tab.Panel>
+        <Tab.Panel>
+          <Basic></Basic>
+        </Tab.Panel>
         <Tab.Panel>Content 2</Tab.Panel>
         <Tab.Panel>Content 3</Tab.Panel>
         <Tab.Panel>Content 4</Tab.Panel>
