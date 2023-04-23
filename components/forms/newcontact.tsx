@@ -1,5 +1,6 @@
 import React from "react";
 import { Formik } from "formik";
+import Button from "@/components/UI/Button";
 
 const Basic = () => (
   <div>
@@ -24,49 +25,26 @@ const Basic = () => (
       }) => (
         <form
           onSubmit={handleSubmit}
-          className="m-10 grid grid-cols-4 gap-4 text-white"
+          className="m-10 grid grid-cols-2 gap-5 text-white "
         >
-          <input
-            type="email"
-            name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.email}
-            placeholder="email"
-          />
-          {errors.email && touched.email && errors.email}
-          <input
-            type="password"
-            name="password"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.password}
-          />
-          <input
-            type="password"
-            name="password"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.password}
-          />
-          <input
-            type="password"
-            name="password"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.password}
-          />
-          <input
-            type="password"
-            name="password"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.password}
-          />
-          {errors.password && touched.password && errors.password}
-          <button type="submit" disabled={isSubmitting}>
-            Submit
-          </button>
+          <div>
+            <h1 className="m-1">First Name</h1>
+            <input
+              type="text"
+              placeholder="Type here"
+              className="input input-bordered input-lg w-full max-w-xs "
+            />
+          </div>
+          <div>
+            <h1 className="m-1">First Name</h1>
+            <input
+              type="text"
+              placeholder="Type here"
+              className="input input-bordered input-lg w-full max-w-xs"
+            />
+          </div>
+
+          <Button title={"Submit"}></Button>
         </form>
       )}
     </Formik>
