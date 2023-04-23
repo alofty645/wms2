@@ -12,10 +12,10 @@ const Topbar = () => {
         <div className="flex appearance-none left-3 rounded-3xl  bg-sky-950 ">
           <input
             type="text"
-            className="appearance-none bg-transparent px-4 py-2 w-64 rounded-3xl text-white "
+            className="appearance-none bg-transparent px-4 py-2 w-64 rounded-3x "
             placeholder="Search..."
           />
-          <button className="flex items-center justify-center px-5 rounded-3xl ">
+          <button className="flex items-center justify-center px-5 rounded-3xl  focus:scale-[0.90] ">
             <svg
               className="w-6 h-6"
               fill="white"
@@ -81,7 +81,10 @@ const Topbar = () => {
         </div>
 
         <div className="m-2 text-white flex gap-3 ">
-          <a href="#" className="hover:bg-sky-950 hover:rounded-full">
+          <a
+            href="#"
+            className="hover:bg-sky-950 hover:rounded-full focus:scale-[0.90]"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -97,7 +100,10 @@ const Topbar = () => {
               />
             </svg>
           </a>
-          <a href="#" className="hover:bg-sky-950 hover:rounded-full">
+          <a
+            href="#"
+            className="hover:bg-sky-950 hover:rounded-full focus:scale-[0.90]"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -118,7 +124,10 @@ const Topbar = () => {
               />
             </svg>
           </a>
-          <a href="#" className="hover:bg-sky-950 hover:rounded-full">
+          <a
+            href="#"
+            className="hover:bg-sky-950 hover:rounded-full focus:scale-[0.90]"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
